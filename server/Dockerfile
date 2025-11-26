@@ -16,6 +16,8 @@
     # Copy the rest of the files
     COPY . $APP
 
+    RUN python manage.py collectstatic --noinput
+
     EXPOSE 8000
 
     RUN chmod +x /app/entrypoint.sh

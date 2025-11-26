@@ -19,11 +19,23 @@ spec:
       labels:
         run: dealership
     spec:
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
+      imagePullSecrets:
+        - name: icr
       containers:
-      - image: us.icr.io/sn-labs-nikeshkr/dealership:latest
-        imagePullPolicy: Always
-        name: dealership
-        ports:
-        - containerPort: 8000
-          protocol: TCP
+        - name: dealership
+          image: us.icr.io/sn-labs-nikeshkr/dealership:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
       restartPolicy: Always
