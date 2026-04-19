@@ -1,20 +1,9 @@
-Watching for file changes with StatReloader
 System check identified some issues:
 
 WARNINGS:
 ?: (staticfiles.W004) The directory '/home/project/xrwvm-fullstack_developer_capstone/server/frontend/build' in the STATICFILES_DIRS setting does not exist.
-?: (staticfiles.W004) The directory '/home/project/xrwvm-fullstack_developer_capstone/server/frontend/build/static' in the STATICFILES_DIRS setting does not exist.
 
 System check identified 2 issues (0 silenced).
-[19/Apr/2026 05:30:48] "POST /djangoapp/login HTTP/1.1" 200 48
-[19/Apr/2026 05:30:48] "GET /djangoapp/logout HTTP/1.1" 200 16
-[19/Apr/2026 05:30:48] "GET /djangoapp/get_dealers HTTP/1.1" 200 58
-[19/Apr/2026 05:30:48] "GET /djangoapp/dealer/1 HTTP/1.1" 200 57
-[19/Apr/2026 05:30:48] "GET /djangoapp/get_dealers/Kansas HTTP/1.1" 200 58
-Internal Server Error: /djangoapp/reviews/dealer/1
-Traceback (most recent call last):
-  File "/home/theia/.local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/theia/.local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+Django version 5.2.13, using settings 'djangoproj.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
