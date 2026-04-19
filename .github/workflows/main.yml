@@ -24,7 +24,7 @@ jobs:
     - name: Run Linter
       run: |
         pwd
-        find . -name "*.py" -not -path "*/node_modules/*" -not -path "*/migrations/*" -not -path "*/djangoenv/*" -exec flake8 --max-line-length=100 {} +
+        flake8 --max-line-length=200 --exclude=node_modules,migrations,djangoenv .
         echo "Linted all the python files successfully"
   lint_js:
     name: Lint JavaScript Files
