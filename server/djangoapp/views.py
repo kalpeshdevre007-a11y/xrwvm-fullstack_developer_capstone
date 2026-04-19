@@ -125,3 +125,9 @@ def get_cars(request):
         for car_model in car_models
     ]
     return JsonResponse({"CarModels": cars})
+
+def analyze_review(request):
+    if request.method == "GET":
+        text = request.GET.get("text", "")
+        response = analyze_review_sentiments(text)
+        return JsonResponse({"sentiment": response})
