@@ -126,6 +126,7 @@ def get_cars(request):
     ]
     return JsonResponse({"CarModels": cars})
 
+
 def analyze_review(request):
     if request.method == "GET":
         text = request.GET.get("text", "")
